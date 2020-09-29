@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap');
+
+$black: #111;
+$yellow: #E4B91E;
+$white: #f9f9f9;
+
+$navbarHeight: 80px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white;
+    color: $black;
+    font-family: 'Raleway', Arial, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    align-items: center;
+    background-color: rgba(255, 255, 255, .05);
+    height: $navbarHeight;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 55px;
+    position: absolute;
+    top: 3%;
+    width: 100%;
+    z-index: 3;
+
+    &__logo-section {
+        h2 {
+            color: $yellow;
+            font-size: 36px;
+            font-style: italic;
+            opacity: 0;
+            text-shadow: rgba(0,0,0,.2) 1px 0 4px; 
+            transition: all 1.5s ease-in-out;
+            span {
+                color: $black;
+            }
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+    &__links-section {
+        ul {
+            display: flex;
+            list-style: none;
+            opacity: 0;
+            transition: all 1.5s ease-in-out;
+
+            li {
+                a {
+                    color: $black;
+                    font-size: 18px;
+                }
+                &:not(:last-child) {
+                    margin-right: 25px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.section {
+    height: 100vh;
+}
+
+#accueil {
+    background: url('../images/cover1.jpg') no-repeat;
+    width: 100%;
+
+    .layer {
+        background-color: #fff;
+        height: 100vh;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        transition: all 1.5s ease-in-out;
+        width: 100%;
+        z-index: 1;
+
+        &.show {
+            opacity: .3;
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        
+        &__left {
+            margin: auto;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            transition-delay: .45s;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+        &__right {
+            display: block;
+            margin: 45% auto 0 auto;
+
+            opacity: 0;
+            transform: translateY(-10%);
+            transition: all 1s ease-in-out;
+            transition-delay: .45s;
+
+            h1 {
+                text-shadow: rgba(0,0,0,.2) 1px 0 4px; 
+                color: $yellow;
+                font-size: 64px;
+                font-style: italic;
+                letter-spacing: 0.03em;
+
+                span {
+                    color: $black;
+                    opacity: 0;
+                    transition: all 1s ease-in-out;
+                    transition-delay: 1.45s;
+
+                    &.show {
+                        opacity: 1;
+                    }
+                }
+            }
+            p {
+                margin: 30px 0 40px 0;
+                padding-right: 100px;
+            }
+            .btn {
+                background-color: $yellow;
+                border: none;
+                border-radius: 15px;
+                color: $white;
+                font-size: 18px;
+                font-style: italic;
+                outline: none;
+                padding: 16px 56px;
+            }
+
+            &.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+#produits {
+    background: url('../images/bg_honeycombs_yellow.jpg') no-repeat;
+    width: 100%;
+}
+
+#contact {
+    
+}

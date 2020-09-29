@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #111;
+  font-family: 'Raleway', Arial, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 55px;
+  position: absolute;
+  top: 3%;
+  width: 100%;
+  z-index: 3;
+}
+
+.navbar__logo-section h2 {
+  color: #E4B91E;
+  font-size: 36px;
+  font-style: italic;
+  opacity: 0;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 0 4px;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+
+.navbar__logo-section h2 span {
+  color: #111;
+}
+
+.navbar__logo-section h2.show {
+  opacity: 1;
+}
+
+.navbar__links-section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  opacity: 0;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+
+.navbar__links-section ul li a {
+  color: #111;
+  font-size: 18px;
+}
+
+.navbar__links-section ul li:not(:last-child) {
+  margin-right: 25px;
+}
+
+.navbar__links-section ul li:hover {
+  text-decoration: underline;
+}
+
+.navbar__links-section ul.show {
+  opacity: 1;
+}
+
+.section {
+  height: 100vh;
+}
+
+#accueil {
+  background: url("../images/cover1.jpg") no-repeat;
+  width: 100%;
+}
+
+#accueil .layer {
+  background-color: #fff;
+  height: 100vh;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  width: 100%;
+  z-index: 1;
+}
+
+#accueil .layer.show {
+  opacity: .3;
+}
+
+#accueil .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+#accueil .content__left {
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition-delay: .45s;
+          transition-delay: .45s;
+}
+
+#accueil .content__left.show {
+  opacity: 1;
+}
+
+#accueil .content__right {
+  display: block;
+  margin: 45% auto 0 auto;
+  opacity: 0;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition-delay: .45s;
+          transition-delay: .45s;
+}
+
+#accueil .content__right h1 {
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 0 4px;
+  color: #E4B91E;
+  font-size: 64px;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+#accueil .content__right h1 span {
+  color: #111;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition-delay: 1.45s;
+          transition-delay: 1.45s;
+}
+
+#accueil .content__right h1 span.show {
+  opacity: 1;
+}
+
+#accueil .content__right p {
+  margin: 30px 0 40px 0;
+  padding-right: 100px;
+}
+
+#accueil .content__right .btn {
+  background-color: #E4B91E;
+  border: none;
+  border-radius: 15px;
+  color: #f9f9f9;
+  font-size: 18px;
+  font-style: italic;
+  outline: none;
+  padding: 16px 56px;
+}
+
+#accueil .content__right.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#produits {
+  background: url("../images/bg_honeycombs_yellow.jpg") no-repeat;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
